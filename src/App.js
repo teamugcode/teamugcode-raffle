@@ -2,10 +2,11 @@ import "./App.css";
 import Title from "./components/Title";
 import NameInput from "./components/NameInput";
 import AddParticipantButton from "./components/AddParticipantButton";
-import React from "react";
+import React, { useState } from "react";
 
 function App() {
     const inputRef = React.createRef();
+    const [participants, setParticipants] = useState([]);
     return (
         <div className="App">
             <Title title="Teamugcode Raffle" />
@@ -14,7 +15,12 @@ function App() {
                 placeholder="Teemu"
                 ref={inputRef}
             />
-            <AddParticipantButton text="Add new participant" ref={inputRef} />
+            <AddParticipantButton
+                text="Add new participant"
+                ref={inputRef}
+                participants={participants}
+                setParticipants={setParticipants}
+            />
         </div>
     );
 }

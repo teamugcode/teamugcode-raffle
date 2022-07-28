@@ -2,7 +2,13 @@ import React from "react";
 
 const AddParticipantButton = React.forwardRef((props, ref) => {
     const handleButtonClick = () => {
-        console.log(ref.current.value);
+        if (!props.participants.includes(ref.current.value)) {
+            const updatedParticipants = [
+                ...props.participants,
+                ref.current.value,
+            ];
+            props.setParticipants(updatedParticipants);
+        }
     };
 
     return (
