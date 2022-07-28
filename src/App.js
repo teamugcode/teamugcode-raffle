@@ -10,31 +10,48 @@ import Result from "./components/Result";
 function App() {
     const inputRef = React.createRef();
     const [participants, setParticipants] = useState([]);
+    const [resultModalIsOpen, setResultModalIsOpen] = useState(false);
     const [resultText, setResultText] = useState("No winner yet!");
     return (
         <div className="App">
             <Title title="Teamugcode Raffle" />
-            <NameInput
-                addText="Enter the name of a participant"
-                placeholder="Teemu"
-                ref={inputRef}
-            />
-            <AddParticipantButton
-                text="Add new participant"
-                ref={inputRef}
-                participants={participants}
-                setParticipants={setParticipants}
-            />
-            <RaffleButton
-                participants={participants}
-                text="Raffle the winner"
-                setResultText={setResultText}
-            />
+            <section id="InputSection" className="InputSection">
+                <NameInput
+                    addText="Enter the name of a participant"
+                    placeholder="Teemu"
+                    ref={inputRef}
+                />
+                <AddParticipantButton
+                    text="Add new participant"
+                    ref={inputRef}
+                    participants={participants}
+                    setParticipants={setParticipants}
+                />
+                <RaffleButton
+                    participants={participants}
+                    text="Raffle the winner"
+                    setResultText={setResultText}
+                    resultModalIsOpen={resultModalIsOpen}
+                    setResultModalIsOpen={setResultModalIsOpen}
+                />
+            </section>
             <ParticipantList
                 title="Participant list"
                 participants={participants}
             />
-            <Result text={resultText} />
+            <section
+                id="ResultSection"
+                className={`ResultSection ${
+                    resultModalIsOpen ? "ResultModalOpen" : null
+                }`}
+            >
+                <Result
+                    className={resultModalIsOpen ? "ResultModalOpen" : null}
+                    text={resultText}
+                    resultModalIsOpen={resultModalIsOpen}
+                    setResultModalIsOpen={setResultModalIsOpen}
+                />
+            </section>
         </div>
     );
 }

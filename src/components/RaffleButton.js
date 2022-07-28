@@ -11,6 +11,7 @@ const RaffleButton = (props) => {
 
         if (winner) {
             props.setResultText(`We have a winner ${winner}`);
+            props.setResultModalIsOpen(true);
         }
     };
     return (

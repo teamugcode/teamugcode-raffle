@@ -1,38 +1,112 @@
 .App {
-  text-align: center;
+    text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.App > h1 {
+    box-shadow: rgb(0, 0, 0, 0.15) 0px 3px 3px 0px;
+    padding: 32px 0;
+    margin: 0;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.InputSection {
+    margin-top: 3px;
+    background: #ff8c03;
+    color: #fff;
+    padding: 32px 15px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.ResultSection.ResultModalOpen {
+    display: block;
 }
 
-.App-link {
-  color: #61dafb;
+.ResultSection {
+    margin-top: 3px;
+    background: rgba(0, 0, 0, 0.45);
+    color: #fff;
+    padding: 32px 15px;
+    left: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    display: none;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.ResultWrapper {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+}
+
+.ResultContentWrapper {
+    position: relative;
+    background: #2250f4;
+    color: #fff;
+    padding: 64px;
+    min-width: 80%;
+    min-height: 50%;
+    font-size: 28px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 15px;
+}
+
+.ResultText {
+    font-size: 28px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.ResultWrapper__Close {
+    font-size: 18px;
+    position: absolute;
+    top: 12px;
+    right: 12px;
+    border-radius: 4px;
+    border: 2px solid #2250f4;
+    padding: 12px;
+}
+
+.InputSection label {
+    font-size: 24px;
+    display: block;
+    margin-bottom: 12px;
+}
+
+.NameInputWrapper__Input {
+    display: inline-block;
+    padding: 12px;
+    font-size: 24px;
+    margin-bottom: 32px;
+    border-radius: 4px;
+    border: 2px solid #2250f4;
+}
+
+.AddParticipantButton,
+.RaffleButton {
+    background: #2250f4;
+    color: #fff;
+    border: 2px solid #2250f4;
+    border-radius: 4px;
+    display: inline-block;
+    padding: 24px 40px;
+    font-size: 21px;
+    margin: 12px;
+    font-weight: bold;
+}
+
+.AddParticipantButton:hover,
+.RaffleButton:hover {
+    background: #fff;
+    color: #2250f4;
+    cursor: pointer;
+}
+
+.ParticipantList__Participant {
+    display: inline-block;
+    margin: 15px;
 }
