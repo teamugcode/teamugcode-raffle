@@ -5,10 +5,12 @@ import AddParticipantButton from "./components/AddParticipantButton";
 import React, { useState } from "react";
 import RaffleButton from "./components/RaffleButton";
 import ParticipantList from "./components/ParticipantList";
+import Result from "./components/Result";
 
 function App() {
     const inputRef = React.createRef();
     const [participants, setParticipants] = useState([]);
+    const [resultText, setResultText] = useState("No winner yet!");
     return (
         <div className="App">
             <Title title="Teamugcode Raffle" />
@@ -26,11 +28,13 @@ function App() {
             <RaffleButton
                 participants={participants}
                 text="Raffle the winner"
+                setResultText={setResultText}
             />
             <ParticipantList
                 title="Participant list"
                 participants={participants}
             />
+            <Result text={resultText} />
         </div>
     );
 }

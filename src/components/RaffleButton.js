@@ -10,7 +10,7 @@ const RaffleButton = (props) => {
         const winner = raffleOneItemFromArray(props.participants);
 
         if (winner) {
-            alert(`We have a winner ${winner}`);
+            props.setResultText(`We have a winner ${winner}`);
         }
     };
     return (
