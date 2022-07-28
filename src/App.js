@@ -4,6 +4,7 @@ import NameInput from "./components/NameInput";
 import AddParticipantButton from "./components/AddParticipantButton";
 import React, { useState } from "react";
 import RaffleButton from "./components/RaffleButton";
+import ParticipantList from "./components/ParticipantList";
 
 function App() {
     const inputRef = React.createRef();
@@ -25,6 +26,10 @@ function App() {
             <RaffleButton
                 participants={participants}
                 text="Raffle the winner"
+            />
+            <ParticipantList
+                title="Participant list"
+                participants={participants}
             />
         </div>
     );
