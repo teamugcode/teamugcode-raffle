@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 # teamugcode-raffle
 Simple raffling app to figure out the winner among the participants. No result saving.
 
@@ -9,8 +8,6 @@ Simple raffling app to figure out the winner among the participants. No result s
 - [ ] Add list of names to show the participants
 - [ ] Add raffle button to reorder the list and pick winner
 - [ ] Add area to show results
-
-=======
 
 ## Development environment
 
