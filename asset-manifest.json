@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/teamugcode-raffle/static/css/main.bbe6f6ca.css",
+    "main.js": "/teamugcode-raffle/static/js/main.0610fbe8.js",
+    "static/js/787.4d79f9b2.chunk.js": "/teamugcode-raffle/static/js/787.4d79f9b2.chunk.js",
+    "index.html": "/teamugcode-raffle/index.html",
+    "main.bbe6f6ca.css.map": "/teamugcode-raffle/static/css/main.bbe6f6ca.css.map",
+    "main.0610fbe8.js.map": "/teamugcode-raffle/static/js/main.0610fbe8.js.map",
+    "787.4d79f9b2.chunk.js.map": "/teamugcode-raffle/static/js/787.4d79f9b2.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.bbe6f6ca.css",
+    "static/js/main.0610fbe8.js"
+  ]
+}
